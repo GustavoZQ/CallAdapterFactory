@@ -43,3 +43,16 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
 
 }
+
+afterEvaluate {
+    publishing {
+        publications{
+            release(MavenPublication){
+                from components.release
+                groupId = 'com.apiresults.bygdx'
+                artifactId = 'CallAdapterFactory'
+                version = '1.0.0'
+            }
+        }
+    }
+}
